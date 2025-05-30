@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 67.9,
+      "left": 142.05,
+      "rotate": 90,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": 42.4,
+      "left": 97.1,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 47.9,
+      "left": 262.7,
+      "rotate": 90,
+      "attrs": { "color": "green", "key": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 47.9,
+      "left": 320.3,
+      "rotate": 90,
+      "attrs": { "color": "green", "key": "2", "bounce": "1" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP12", "rgb1:B", "blue", [ "v0" ] ],
+    [ "pico:GND.7", "btn2:1.r", "black", [ "v49.2", "h19.2" ] ],
+    [ "pico:GND.8", "btn1:1.r", "black", [ "v30", "h57.6" ] ],
+    [ "rgb1:COM", "pico:GND.4", "black", [ "v0" ] ],
+    [ "rgb1:G", "pico:GP11", "green", [ "v0" ] ],
+    [ "rgb1:R", "pico:GP13", "red", [ "v0" ] ],
+    [ "btn1:2.l", "pico:GP5", "green", [ "v-9.6", "h-57.8" ] ],
+    [ "btn2:2.l", "pico:GP6", "green", [ "v-28.8", "h-38.6" ] ]
+  ],
+  "dependencies": {}
+}
