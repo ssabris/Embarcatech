@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "Washington Luis Santos Silva",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": 83.15,
+      "left": -159.65,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd2",
+      "top": -22.4,
+      "left": -42.4,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GND.8", "lcd2:GND", "black", [ "h29.11", "v-105.6" ] ],
+    [ "pico:3V3", "lcd2:VCC", "red", [ "h19.51", "v-115.2" ] ],
+    [ "lcd2:SDA", "pico:GP4", "yellow", [ "h-144", "v9.8" ] ],
+    [ "lcd2:SCL", "pico:GP5", "magenta", [ "h-153.6", "v19.5" ] ]
+  ],
+  "dependencies": {}
+}
