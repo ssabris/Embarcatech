@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "deAssis Barroso",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": 73.55,
+      "left": -44.45,
+      "attrs": { "cyw43": "1", "builder": "pico-sdk" }
+    },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": 119.4, "left": 86.5, "attrs": {} }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:VBUS", "rtc1:5V", "red", [ "h38.71", "v58" ] ],
+    [ "pico:GP20", "rtc1:SDA", "green", [ "h48.31", "v-66.9" ] ],
+    [ "pico:GP21", "rtc1:SCL", "green", [ "h38.71", "v-48" ] ],
+    [ "pico:GND.8", "rtc1:GND", "black", [ "h29.11", "v28.8" ] ]
+  ],
+  "dependencies": {}
+}
