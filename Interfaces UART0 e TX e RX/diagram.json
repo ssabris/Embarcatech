@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "deAssis Barroso",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": 73.55,
+      "left": -44.45,
+      "attrs": { "cyw43": "1", "builder": "pico-sdk" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GP0", "pico:GP4", "gold", [ "h-19.2", "v38.4" ] ],
+    [ "pico:GP1", "pico:GP5", "blue", [ "h-19.2", "v48" ] ]
+  ],
+  "dependencies": {}
+}
