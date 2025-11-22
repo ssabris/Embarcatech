@@ -24,7 +24,6 @@ Os projetos são desenvolvidos utilizando os seguintes recursos:
 | **09 - Real Time Clock** | Configuração e uso de um **RTC** para gerenciamento preciso de tempo e data. |
 | **10 - Pi Pico SDK Blink RGB** | Configuração de ambiente e uso de **SDK Nativo** (RP2040) para controle de hardware. |
 | **11 - TecladoCofre** | Projeto de integração: Combina leitura de teclado matricial, lógica complexa e feedback em displays. |
-| :--- | :--- |
 
 ## 🧑‍💻 Autor
 
